@@ -13,22 +13,23 @@
 
   <div>
   
-    <h4>{{a}}</h4>
-    <p @click="모달창열렸니 = true">50만원</p>
-    <button @click="increase">허위매물신고</button> <span>신고 수 : {{ 신고수 }}</span>
+  <img src="원룸들[0].image" class="room-img">
+    <h4>{{원룸들[0].title}}</h4>
+    <p>{{원룸들[0].price}}원</p>
+    <p>50만원</p>
   </div>
-  <img src="./assets/지리산하은2.jpeg" class="room-img">
   
 </template>
 
 <script>
 
-
+import data from './assets/oneroom.js';
 
 export default {
   name: 'App',
   data(){
     return {
+      원룸들 : data,
       모달창열렸니 : false,
       신고수 : 0,
       menus : ['HOME', 'SHOP', 'ABOUT'],
